@@ -4,9 +4,9 @@
 <div style="display: table-row">
 <div style="display: table-cell">
   <b>Your markdown source:</b><br />
-  <%= form_tag('/format', :remote => true) do |f| %>
+  <%= form_tag('/format', :remote => true, :id => 'sourceForm') do |f| %>
   <%= text_area(:source, :text, :escape => false) %><br />
-  <%= submit_tag('Output markdown') %>
+  <%= submit_tag('Output markdown', :id => 'submit-button') %>
   <% end %>
 </div>
 
