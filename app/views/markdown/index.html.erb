@@ -1,0 +1,18 @@
+<h1>Showdown</h1>
+<h2>Your friendly markdown preview...</h2>
+
+<div style="display: table-row">
+<div style="display: table-cell">
+  <b>Your markdown source:</b><br />
+  <%= form_tag('/format', :remote => true) do |f| %>
+  <%= text_area(:source, :text, :escape => false) %><br />
+  <%= submit_tag('Output markdown') %>
+  <% end %>
+</div>
+
+<div style="display: table-cell">
+  <b>Result:</b><br />
+  <div id="result"></div>
+</div>
+</div>
+
