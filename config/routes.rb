@@ -1,4 +1,7 @@
 Showdown::Application.routes.draw do
+  root :to => 'markdown#index'
+  match 'format' => 'markdown#format'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
